@@ -14,17 +14,68 @@ header {
     border-bottom: 2px solid black;
 }
 
-.logo img {
+.logo {
     width: 150px;
 }
 
-.hamburgerButton {
+.hamburgerIcon {
     width: 35px;
     position:fixed;
     right: 20px;
     top: 20px;
     cursor: pointer;
 }
-.hamburgerButton:active {
+.hamburgerIcon:active {
     transform: scale(0.9);
 }
+
+.hamburgerClose {
+    width: 35px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin: 7px;
+}
+.hamburgerClose:active {
+    transform: scale(0.9);
+}
+
+.navBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 35vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(114, 114, 114);
+    border-left: 2px solid rgb(253, 238, 29);
+    transition: 0.5s ease;
+}
+
+.navBox a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    border-radius: 7px;
+    padding: 5px;
+    transition: 0.1s linear;
+}
+.navBox a:hover {
+    transform: scale(1.1);
+    border-radius: 0px;
+}
+.navBox a:active {
+    transform: scale(0.9);
+}
+.navBoxHidden {
+    right: -36vw;
+}
+
+.noDisplay {
+    display: none;
+}
+
