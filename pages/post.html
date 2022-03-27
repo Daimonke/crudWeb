@@ -32,20 +32,22 @@
             <h1>Post new ad</h1>
             <form id="postForm">
                 <label for="brand">Car brand:</label>
-                <input type="text" name="brand" id="brand">
+                <input type="text" name="brand" id="brand" required>
                 <label for="model">Car model:</label>
-                <input type="text" name="model" id="model">
+                <input type="text" name="model" id="model" required>
                 <label for="fuel">Type of fuel:</label>
-                <select name="fuel" id="fuel">
+                <select name="fuel" id="fuel" required>
                 <option value="Diesel">Diesel</option>
                 <option value="Petrol">Petrol</option>
                 <option value="Gas/Petrol">Gas/Petrol</option>
                 <option value="Electric">Electric</option>
                 <option value="Petrol/electric">Petrol/electric</option>
                 </select>
+                <label for="image">Car image url:</label>
+                <input type="text" name="image" id="image" required>
                 <label for="price">Price:</label>
                 <span class="input-symbol-euro">
-                    <input type="number" name="price" id="price">
+                    <input type="number" name="price" id="price" required>
                 </span>
                 <button type="submit">Post</button>
             </form>
