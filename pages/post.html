@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post car</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/post.css">
+    <script src="../scripts/post.js" defer></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <a href="/">
+                <img class="logo" src="../images/logo.png" alt="logo">
+            </a>
+            <nav>
+                <img class="hamburgerIcon" src="https://static.thenounproject.com/png/929002-200.png"
+                    alt="open menu button">
+                <div class="navBox noDisplay navBoxHidden">
+                    <img class="hamburgerClose"
+                        src="https://cdn0.iconfinder.com/data/icons/pixon-1/24/circle_close_delete_exit_remove_x_outline-512.png"
+                        alt="close menu button">
+                    <a href="/">Home</a>
+                    <a href="./mycars.html">My cars</a>
+                    <a href="./post.html">Post car</a>
+                </div>
+            </nav>
+        </header>
+        <main id="postMain">
+            <h1>Post new ad</h1>
+            <form id="postForm">
+                <label for="brand">Car brand:</label>
+                <input type="text" name="brand" id="brand">
+                <label for="model">Car model:</label>
+                <input type="text" name="model" id="model">
+                <label for="fuel">Type of fuel:</label>
+                <select name="fuel" id="fuel">
+                <option value="Diesel">Diesel</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Gas/Petrol">Gas/Petrol</option>
+                <option value="Electric">Electric</option>
+                <option value="Petrol/electric">Petrol/electric</option>
+                </select>
+                <label for="price">Price:</label>
+                <span class="input-symbol-euro">
+                    <input type="number" name="price" id="price">
+                </span>
+                <button type="submit">Post</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
