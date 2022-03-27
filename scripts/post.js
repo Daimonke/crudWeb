@@ -27,7 +27,7 @@ postForm.addEventListener('submit', e => {
         "model": e.target.elements.model.value,
         "fuel": e.target.elements.fuel.value,
         "image": e.target.elements.image.value,
-        "price": parseInt(e.target.elements.price.value),
+        "price": e.target.elements.price.value + '€',
     }
 
     fetch('http://localhost:3000/cars', {
