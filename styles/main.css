@@ -99,6 +99,7 @@ header {
 
 #main .title {
     text-align: center;
+    width: 100%;
 }
 #main .title a {
     text-decoration: none;
@@ -128,6 +129,7 @@ header {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding-right: 5px;
+    gap: 5px;
     overflow: hidden;
 }
 #main img {
@@ -146,3 +148,80 @@ header {
     width: 100%;
 }
 /* Main ends */
+
+/* Tablet media */
+@media (min-width:600px) {
+    #main > div:nth-child(n+2) {
+        display: flex;
+        width: 90%;
+        overflow: visible;
+        border: 1px solid black;
+    }
+    #main img {
+        margin-right: 10px;
+        max-width: 300px;
+    }
+    #main {
+        align-items: center;
+    }
+}
+/* Laptop Media */
+@media (min-width:992px) {
+    #main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #main > div:nth-child(n+2) {
+        display: flex;
+        border: 1px solid black;
+        width: 48%;
+    }
+    #main img {
+        min-width: 300px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .hamburgerIcon {
+        display: none;
+    }
+    .hamburgerClose {
+        display: none;
+    }
+    .navBox {
+        margin-left: 300px;
+        flex-direction: row;
+        gap: 20px;
+        height: fit-content;
+        width: fit-content;
+        position: unset;
+        background-color: unset;
+        border-left: unset;
+        transition: unset;
+    }
+    
+    .navBox a {
+        color: rgb(0, 0, 0);
+        border-bottom: 2px solid rgb(0, 0, 0);
+        border-top: 2px solid rgb(0, 0, 0);
+    }
+    .navBoxHidden {
+        right: unset;
+    }
+    .noDisplay {
+        display: flex;
+    }
+}
+/* Desktop Media */
+@media (min-width:1300px) {
+    #main > div:nth-child(n+2) {
+        display: flex;
+        border: 1px solid black;
+        width: 520px;
+    }
+    #main img {
+        min-width: 300px;
+        height: 200px;
+        object-fit: cover;
+    }
+}

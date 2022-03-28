@@ -57,3 +57,16 @@
     content:"€";
     right: 5px;
 }
+/* Tablet media */
+@media (min-width:600px) {
+   #postForm {
+       width: 500px;
+       margin: 20px auto;
+   }
+}
+/* Laptop media */
+@media (min-width:992px) {
+    #postForm {
+        width: 800px;
+    }
+ }
