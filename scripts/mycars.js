@@ -1,3 +1,4 @@
+
 // nav functionality
 const navBox = document.querySelector('.navBox')
 const hamburgerClose = document.querySelector('.hamburgerClose')
@@ -55,11 +56,28 @@ fetch('http://localhost:3000/cars')
     .catch(error => console.log(error))
 
 // Car edit form
-
-
 function editButton(brand, model, fuel, image, price, id) {
     const formDiv = document.createElement('form')
     formDiv.id = 'editForm'
+    // Fuel selected option
+    let diesel;
+    let petrol;
+    let gasPetrol;
+    let electric;
+    let petrolElectric;
+    switch (fuel) {
+        case 'Diesel': diesel = 'selected'
+            break;
+        case 'Petrol': petrol = 'selected'
+            break;
+        case 'Gas/Petrol': pegasPetroltrol = 'selected'
+            break;
+        case 'Electric': electric = 'selected'
+            break;
+        case 'Petrol/electric': petrolElectric = 'selected'
+            break;
+    }
+    // Form
     formDiv.innerHTML = `
     <label for="brand">Car brand:</label>
     <input type="text" name="brand" id="brand" value="${brand}" required>
@@ -67,11 +85,11 @@ function editButton(brand, model, fuel, image, price, id) {
     <input type="text" name="model" id="model" value="${model}" required>
     <label for="fuel">Type of fuel:</label>
     <select name="fuel" id="fuel" required>
-    <option value="Diesel">Diesel</option>
-    <option value="Petrol">Petrol</option>
-    <option value="Gas/Petrol">Gas/Petrol</option>
-    <option value="Electric">Electric</option>
-    <option value="Petrol/electric">Petrol/electric</option>
+    <option value="Diesel" ${diesel}>Diesel</option>
+    <option value="Petrol" ${petrol}>Petrol</option>
+    <option value="Gas/Petrol" ${gasPetrol}>Gas/Petrol</option>
+    <option value="Electric" ${electric}>Electric</option>
+    <option value="Petrol/electric" ${petrolElectric}>Petrol/electric</option>
     </select>
     <label for="image"">Car image url:</label>
     <input type="text" name="image" id="image" value="${image}" required>
@@ -93,6 +111,7 @@ function editButton(brand, model, fuel, image, price, id) {
         const newPrice = e.target.elements.price.value
         editCar(newBrand, newModel, newFuel, newImage, newPrice, id)
     })
+    window.location = "#";
     main.append(formDiv)
 }
 

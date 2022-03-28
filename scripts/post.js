@@ -37,5 +37,5 @@ postForm.addEventListener('submit', e => {
         },
         body: JSON.stringify(data),
     })
-    .then(alert(`Car posted!`))
+        .then(alert(`Car posted!`))
 })
