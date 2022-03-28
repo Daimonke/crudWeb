@@ -127,6 +127,8 @@ header {
     background-color: rgb(231, 231, 231);
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    padding-right: 5px;
+    overflow: hidden;
 }
 #main img {
     max-width: 200px;
@@ -134,11 +136,13 @@ header {
 
 #main div div {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
     gap: 5px;
+}
+#main span {
+    width: 100%;
 }
 /* Main ends */

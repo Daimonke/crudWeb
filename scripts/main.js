@@ -25,20 +25,17 @@ function createCar(brand, model, fuel, price, image) {
     <img src="${image}">
     <div>
         <span><strong>Brand:</strong></span>
-        <span>${brand}</span>
-    </div>
-    <div>
         <span><strong>Model:</strong></span>
-        <span>${model}</span>
-    </div>
-    <div>
         <span><strong>Fuel:</strong></span>
-        <span>${fuel}</span>
+        <span><strong>Price:</strong></span>
     </div>
     <div>
-        <span><strong>Price:</strong></span>
+        <span>${brand}</span>
+        <span>${model}</span>
+        <span>${fuel}</span>
         <span>${price}</span>
     </div>
+       
     `
     main.append(carDiv)
 }

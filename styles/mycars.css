@@ -8,6 +8,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 10px;
 }
 
 #myCarsMain img {
@@ -19,7 +20,7 @@
 }
 
 #myCarsMain > div {
-    width: 80%;
+    width: 100%;
     display: flex;
     border-radius: 10px;
     border: 2px solid black;
@@ -27,7 +28,6 @@
 #myCarsMain div div {
     display: flex;
     justify-content: center;
-    padding: 10px;
     gap: 5px;
     width: 100%;
 }
