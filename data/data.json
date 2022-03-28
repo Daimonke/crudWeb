@@ -1,49 +1,49 @@
 {
   "cars": [
     {
-      "user": "demouser",
-      "brand": "Audi",
-      "model": "a5",
-      "fuel": "Diesel",
-      "image": "https://s1.15min.lt/images/photos/2019/09/06/original/audi-a5-sportback-5d72525b09a47.jpg",
-      "price": "50000",
-      "id": 1
+    "user": "demouser",
+    "brand": "Audi",
+    "model": "a5",
+    "fuel": "Diesel",
+    "image": "https://s1.15min.lt/images/photos/2019/09/06/original/audi-a5-sportback-5d72525b09a47.jpg",
+    "price": "50000",
+    "id": 1
     },
     {
-      "user": "demouser",
-      "brand": "Opel",
-      "model": "Insignia",
-      "fuel": "Diesel",
-      "image": "https://img.auto.cz/foto/opel-insignia-grand-sport-opel-insignia-grand-sport-opel-insignia-insignia/Mzc1eDIxMS9jZW50ZXIvdG9wL2ZpbHRlcnM6cXVhbGl0eSg4NSk6bm9fdXBzY2FsZSgpL2ltZw/6060994.jpg?v=0&st=ZGzh7te8mxtEwiDNjD_Ms2N54caTMa8uTC3LISrEMPs&ts=1600812000&e=0",
-      "price": "39000€",
-      "id": 2
+    "user": "demouser",
+    "brand": "Opel",
+    "model": "Insignia",
+    "fuel": "Diesel",
+    "image": "https://img.auto.cz/foto/opel-insignia-grand-sport-opel-insignia-grand-sport-opel-insignia-insignia/Mzc1eDIxMS9jZW50ZXIvdG9wL2ZpbHRlcnM6cXVhbGl0eSg4NSk6bm9fdXBzY2FsZSgpL2ltZw/6060994.jpg?v=0&st=ZGzh7te8mxtEwiDNjD_Ms2N54caTMa8uTC3LISrEMPs&ts=1600812000&e=0",
+    "price": "39000€",
+    "id": 2
     },
     {
-      "user": "demouser",
-      "brand": "Honda",
-      "model": "Civic",
-      "fuel": "Electric",
-      "image": "https://www.motortrend.com/uploads/sites/5/2020/07/2020-Honda-Civic-Si-HPT-Sedan-41.jpg",
-      "price": "79000€",
-      "id": 3
+    "user": "demouser",
+    "brand": "Honda",
+    "model": "Civic",
+    "fuel": "Electric",
+    "image": "https://www.motortrend.com/uploads/sites/5/2020/07/2020-Honda-Civic-Si-HPT-Sedan-41.jpg",
+    "price": "79000€",
+    "id": 3
     },
     {
-      "user": "randomuser1",
-      "brand": "Toyota",
-      "model": "C-HR",
-      "fuel": "Petrol/electric",
-      "image": "https://www.98.lt/files/styles/wide/public/toyota_chr_hybrid_facelift_9.jpg?itok=GLgns7ZM",
-      "price": "28000€",
-      "id": 4
+    "user": "randomuser1",
+    "brand": "Toyota",
+    "model": "C-HR",
+    "fuel": "Petrol/electric",
+    "image": "https://www.98.lt/files/styles/wide/public/toyota_chr_hybrid_facelift_9.jpg?itok=GLgns7ZM",
+    "price": "28000€",
+    "id": 4
     },
     {
-      "user": "randomuser2",
-      "brand": "Volvo",
-      "model": "s40",
-      "fuel": "Diesel",
-      "image": "https://i.pinimg.com/originals/b7/99/b2/b799b2914192daa5eb81ea37c124e387.png",
-      "price": "56000€",
-      "id": 6
+    "user": "randomuser2",
+    "brand": "Volvo",
+    "model": "s40",
+    "fuel": "Diesel",
+    "image": "https://i.pinimg.com/originals/b7/99/b2/b799b2914192daa5eb81ea37c124e387.png",
+    "price": "56000€",
+    "id": 6
     }
-  ]
+    ]
 }

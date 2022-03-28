@@ -22,12 +22,15 @@ header {
     width: 150px;
 }
 
+
 .hamburgerIcon {
     width: 35px;
     position:fixed;
     right: 20px;
     top: 20px;
     cursor: pointer;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 .hamburgerIcon:active {
     transform: scale(0.9);
@@ -38,6 +41,8 @@ header {
     cursor: pointer;
     align-self: flex-end;
     margin: 7px;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 .hamburgerClose:active {
     transform: scale(0.9);
@@ -98,6 +103,9 @@ header {
 #main .title a {
     text-decoration: none;
     color: black;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
 }
 #main .title h1:last-child{
     border: 2px solid black;

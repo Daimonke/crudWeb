@@ -4,16 +4,16 @@ const hamburgerClose = document.querySelector('.hamburgerClose')
 const hamburgerIcon = document.querySelector('.hamburgerIcon')
 hamburgerIcon.addEventListener('click', () => {
     navBox.classList.remove('noDisplay')
-    setTimeout(()=> {
-    navBox.classList.remove('navBoxHidden')
+    setTimeout(() => {
+        navBox.classList.remove('navBoxHidden')
     }, 1)
 })
 
 hamburgerClose.addEventListener('click', () => {
     navBox.classList.add('navBoxHidden')
-    setTimeout(()=> {
+    setTimeout(() => {
         navBox.classList.add('noDisplay')
-        }, 500)
+    }, 500)
 })
 
 // display demouser cars
@@ -36,8 +36,11 @@ function createCar(brand, model, fuel, image, price, id) {
     `
     main.append(carDiv)
 
-    carDiv.querySelector('.myCarsEdit').addEventListener('click', () =>{
-        editButton(brand,model,fuel,image,price,id)
+    carDiv.querySelector('.myCarsEdit').addEventListener('click', () => {
+        editButton(brand, model, fuel, image, price, id)
+    })
+    carDiv.querySelector('.myCarsDelete').addEventListener('click', () => {
+        deleteCar(id)
     })
 }
 
@@ -51,8 +54,10 @@ fetch('http://localhost:3000/cars')
     })
     .catch(error => console.log(error))
 
-// Edit form
-function editButton(brand,model,fuel,image,price,id){
+// Car edit form
+
+
+function editButton(brand, model, fuel, image, price, id) {
     const formDiv = document.createElement('form')
     formDiv.id = 'editForm'
     formDiv.innerHTML = `
@@ -78,10 +83,9 @@ function editButton(brand,model,fuel,image,price,id){
     <button type="submit">Post</button>
     `
     formDiv.querySelector('.cancel').addEventListener('click', () => {
-        formDiv.style.display = 'none'
+        formDiv.remove()
     })
     formDiv.addEventListener('submit', e => {
-        e.preventDefault()
         const newBrand = e.target.elements.brand.value
         const newModel = e.target.elements.model.value
         const newFuel = e.target.elements.fuel.value
@@ -93,17 +97,17 @@ function editButton(brand,model,fuel,image,price,id){
 }
 
 // Put method
-const editforma = document.querySelector('#editForm')
-function editCar(newBrand, newModel, newFuel, newImage, newPrice, id){
+function editCar(newBrand, newModel, newFuel, newImage, newPrice, id) {
+    const openEditForm = document.querySelector('#editForm')
     const data = {
-            "user": "demouser",
-            "brand": newBrand,
-            "model": newModel,
-            "fuel": newFuel,
-            "image": newImage,
-            "price": newPrice,
-            "id": id
-          }
+        "user": "demouser",
+        "brand": newBrand,
+        "model": newModel,
+        "fuel": newFuel,
+        "image": newImage,
+        "price": newPrice,
+        "id": id
+    }
     fetch(`http://localhost:3000/cars/${id}`, {
         method: 'PUT',
         headers: {
@@ -111,7 +115,16 @@ function editCar(newBrand, newModel, newFuel, newImage, newPrice, id){
         },
         body: JSON.stringify(data),
     })
-    .then(alert(`Car posted!`))
-    .then(editforma.style.display = 'none')
+        .then(alert(`Car edited!`))
+        .then(openEditForm.remove())
+}
 
+// Delete method
+
+function deleteCar(id) {
+    fetch(`http://localhost:3000/cars/${id}`, {
+        method: 'DELETE',
+    })
+        .then(res => res.ok)
+        .catch(error => console.log(error))
 }
